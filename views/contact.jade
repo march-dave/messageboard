@@ -1,0 +1,43 @@
+extends ./layout.jade
+
+block content
+  .container
+    h1.text-center Message Board
+
+    .table-responsive
+      table.table.table-striped
+        thead
+          tr
+            th 
+            th Note
+            th Date
+        tbody
+            td
+              img.img-circle(src='//i.imgur.com/r7bu2PDb.jpg')
+            td It began as a message board. 
+            td April 20, 2016 
+        tbody
+            td
+              img.img-circle(src='http://i.imgur.com/xwHjUHQ.gif')
+            td I have open an email just, today. 
+            td April 21, 2016
+              script.
+                moment().format('YYYY MM DD');
+
+
+    form
+      .form-group
+        label(for='exampleInputName2') Image
+        input#image.form-control(type='text', placeholder='Image Url')
+      .form-group
+        label(for='exampleInputName2') Note
+        input#name.form-control(type='text', placeholder='Jane Doe')
+      .form-group
+        label(for='exampleInputDate') Date
+        input#date.form-control(type='text', placeholder='2001 01 01')
+     
+
+    .footer
+      button#btnSave.btn.btn-default(type='button') Save
+
+      
